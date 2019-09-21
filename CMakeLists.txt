@@ -31,41 +31,41 @@ add_library(AnalyseCache STATIC
   # enum your files and delete this comment
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
 )
-#add_executable(tests
-#  # TODO: enum your files and delete this comment
-#  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-#  ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-#
-#)
+add_executable(tests
+  # TODO: enum your files and delete this comment
+  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
+
+)
 
 
 target_include_directories(AnalyseCache
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
-#target_include_directories(tests
-#  PUBLIC
-#        ${CMAKE_CURRENT_SOURCE_DIR}/include
-#        ${GTEST_ROOT}/include
-#)
-#find_library(
-#        GTEST_LOCAL_LIB
-#        NAMES gtest
-#        PATHS ${PROJECT_NAME}/lib/
-#)
-#
-#find_library(
-#        GTEST_LOCAL_LIB_MAIN
-#        NAMES gtest_main
-#        PATHS ${PROJECT_NAME}/lib/
-#)
+target_include_directories(tests
+  PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${GTEST_ROOT}/include
+)
+find_library(
+        GTEST_LOCAL_LIB
+        NAMES gtest
+        PATHS ${GTEST_ROOT}/lib
+)
 
-#target_link_libraries(tests
-##        gtest_main
-#        ${CMAKE_THREAD_LIBS_INIT}
-#        ${GTEST_LOCAL_LIB}
-#        ${GTEST_LOCAL_LIB_MAIN}
-#        AnalyseCache
-#        )
+find_library(
+        GTEST_LOCAL_LIB_MAIN
+        NAMES gtest_main
+        PATHS ${PROJECT_NAME}/lib
+)
+
+target_link_libraries(tests
+#        gtest_main
+        ${CMAKE_THREAD_LIBS_INIT}
+        ${GTEST_LOCAL_LIB}
+        ${GTEST_LOCAL_LIB_MAIN}
+        AnalyseCache
+        )
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)

@@ -1,4 +1,5 @@
 /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/AnalyseCache.dir
 /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/test.dir
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/AnalyseCache.dir
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/tests.dir

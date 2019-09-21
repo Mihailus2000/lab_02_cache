@@ -220,12 +220,6 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Value Computed by CMake
-Cache_BINARY_DIR:STATIC=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug
-
-//Value Computed by CMake
-Cache_SOURCE_DIR:STATIC=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache
-
 //Path to a library.
 GTEST_LOCAL_LIB:FILEPATH=/home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install/lib/libgtest.a
 

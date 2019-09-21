@@ -134,6 +134,19 @@ AnalyseCache/fast:
 	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/build
 .PHONY : AnalyseCache/fast
 
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
 sources/source.o: sources/source.cpp.o
 
 .PHONY : sources/source.o
@@ -141,6 +154,7 @@ sources/source.o: sources/source.cpp.o
 # target to build an object file
 sources/source.cpp.o:
 	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/source.cpp.o
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/sources/source.cpp.o
 .PHONY : sources/source.cpp.o
 
 sources/source.i: sources/source.cpp.i
@@ -150,6 +164,7 @@ sources/source.i: sources/source.cpp.i
 # target to preprocess a source file
 sources/source.cpp.i:
 	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/source.cpp.i
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/sources/source.cpp.i
 .PHONY : sources/source.cpp.i
 
 sources/source.s: sources/source.cpp.s
@@ -159,7 +174,35 @@ sources/source.s: sources/source.cpp.s
 # target to generate assembly for a file
 sources/source.cpp.s:
 	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/source.cpp.s
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/sources/source.cpp.s
 .PHONY : sources/source.cpp.s
+
+tests/test.o: tests/test.cpp.o
+
+.PHONY : tests/test.o
+
+# target to build an object file
+tests/test.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.o
+.PHONY : tests/test.cpp.o
+
+tests/test.i: tests/test.cpp.i
+
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.i
+.PHONY : tests/test.cpp.i
+
+tests/test.s: tests/test.cpp.s
+
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.s
+.PHONY : tests/test.cpp.s
 
 # Help Target
 help:
@@ -169,11 +212,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... AnalyseCache"
 	@echo "... test"
+	@echo "... AnalyseCache"
+	@echo "... tests"
 	@echo "... sources/source.o"
 	@echo "... sources/source.i"
 	@echo "... sources/source.s"
+	@echo "... tests/test.o"
+	@echo "... tests/test.i"
+	@echo "... tests/test.s"
 .PHONY : help
 
 

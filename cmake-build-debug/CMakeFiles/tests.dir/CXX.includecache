@@ -13,6 +13,16 @@ header.hpp
 -
 iostream
 -
+random
+-
 vector
+-
+chrono
+-
+cmath
+-
+algorithm
+-
+memory
 -
 

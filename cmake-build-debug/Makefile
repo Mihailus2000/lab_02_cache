@@ -147,6 +147,60 @@ tests/fast:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
+sources/Analysys.o: sources/Analysys.cpp.o
+
+.PHONY : sources/Analysys.o
+
+# target to build an object file
+sources/Analysys.cpp.o:
+	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o
+.PHONY : sources/Analysys.cpp.o
+
+sources/Analysys.i: sources/Analysys.cpp.i
+
+.PHONY : sources/Analysys.i
+
+# target to preprocess a source file
+sources/Analysys.cpp.i:
+	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.i
+.PHONY : sources/Analysys.cpp.i
+
+sources/Analysys.s: sources/Analysys.cpp.s
+
+.PHONY : sources/Analysys.s
+
+# target to generate assembly for a file
+sources/Analysys.cpp.s:
+	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.s
+.PHONY : sources/Analysys.cpp.s
+
+sources/Experiment.o: sources/Experiment.cpp.o
+
+.PHONY : sources/Experiment.o
+
+# target to build an object file
+sources/Experiment.cpp.o:
+	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o
+.PHONY : sources/Experiment.cpp.o
+
+sources/Experiment.i: sources/Experiment.cpp.i
+
+.PHONY : sources/Experiment.i
+
+# target to preprocess a source file
+sources/Experiment.cpp.i:
+	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.i
+.PHONY : sources/Experiment.cpp.i
+
+sources/Experiment.s: sources/Experiment.cpp.s
+
+.PHONY : sources/Experiment.s
+
+# target to generate assembly for a file
+sources/Experiment.cpp.s:
+	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.s
+.PHONY : sources/Experiment.cpp.s
+
 sources/source.o: sources/source.cpp.o
 
 .PHONY : sources/source.o
@@ -215,6 +269,12 @@ help:
 	@echo "... test"
 	@echo "... AnalyseCache"
 	@echo "... tests"
+	@echo "... sources/Analysys.o"
+	@echo "... sources/Analysys.i"
+	@echo "... sources/Analysys.s"
+	@echo "... sources/Experiment.o"
+	@echo "... sources/Experiment.i"
+	@echo "... sources/Experiment.s"
 	@echo "... sources/source.o"
 	@echo "... sources/source.i"
 	@echo "... sources/source.s"

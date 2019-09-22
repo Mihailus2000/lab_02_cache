@@ -146,6 +146,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/include/Analysis.h">
+			<Option target="AnalyseCache"/>
+		</Unit>
+		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/include/AnasysisExceptions.h">
+			<Option target="AnalyseCache"/>
+		</Unit>
+		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/include/Experiment.h">
+			<Option target="AnalyseCache"/>
+			<Option target="tests"/>
+		</Unit>
+		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Analysys.cpp">
+			<Option target="AnalyseCache"/>
+		</Unit>
+		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Experiment.cpp">
+			<Option target="AnalyseCache"/>
+		</Unit>
 		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/source.cpp">
 			<Option target="AnalyseCache"/>
 			<Option target="tests"/>

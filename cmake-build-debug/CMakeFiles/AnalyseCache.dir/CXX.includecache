@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-../include/header.hpp
-
-/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/source.cpp
-header.hpp
--
+../include/Experiment.h
 iostream
--
-random
--
-vector
--
-chrono
--
-cmath
--
-algorithm
 -
 memory
 -
+chrono
+-
+vector
+-
+algorithm
+-
+numeric
+-
+
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Experiment.cpp
+random
+-
+Experiment.h
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Experiment.h
 

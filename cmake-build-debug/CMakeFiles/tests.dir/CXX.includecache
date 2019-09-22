@@ -6,11 +6,37 @@
 
 #IncludeRegexTransform: 
 
-../include/header.hpp
+../include/Analysis.h
+iostream
+-
+cmath
+-
+Experiment.h
+../include/Experiment.h
+AnasysisExceptions.h
+../include/AnasysisExceptions.h
+
+../include/AnasysisExceptions.h
+exception
+-
+string
+-
+
+../include/Experiment.h
+iostream
+-
+memory
+-
+chrono
+-
+vector
+-
+algorithm
+-
+numeric
+-
 
 /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/source.cpp
-header.hpp
--
 iostream
 -
 random
@@ -25,4 +51,6 @@ algorithm
 -
 memory
 -
+Analysis.h
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Analysis.h
 

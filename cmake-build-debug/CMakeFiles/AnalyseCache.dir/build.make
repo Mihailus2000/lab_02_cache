@@ -70,17 +70,47 @@ CMakeFiles/AnalyseCache.dir/sources/source.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AnalyseCache.dir/sources/source.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/source.cpp -o CMakeFiles/AnalyseCache.dir/sources/source.cpp.s
 
+CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o: CMakeFiles/AnalyseCache.dir/flags.make
+CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o: ../sources/Experiment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o -c /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Experiment.cpp
+
+CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Experiment.cpp > CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.i
+
+CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Experiment.cpp -o CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.s
+
+CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o: CMakeFiles/AnalyseCache.dir/flags.make
+CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o: ../sources/Analysys.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o -c /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Analysys.cpp
+
+CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Analysys.cpp > CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.i
+
+CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Analysys.cpp -o CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.s
+
 # Object files for target AnalyseCache
 AnalyseCache_OBJECTS = \
-"CMakeFiles/AnalyseCache.dir/sources/source.cpp.o"
+"CMakeFiles/AnalyseCache.dir/sources/source.cpp.o" \
+"CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o" \
+"CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o"
 
 # External object files for target AnalyseCache
 AnalyseCache_EXTERNAL_OBJECTS =
 
 libAnalyseCached.a: CMakeFiles/AnalyseCache.dir/sources/source.cpp.o
+libAnalyseCached.a: CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o
+libAnalyseCached.a: CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o
 libAnalyseCached.a: CMakeFiles/AnalyseCache.dir/build.make
 libAnalyseCached.a: CMakeFiles/AnalyseCache.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libAnalyseCached.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libAnalyseCached.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/AnalyseCache.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AnalyseCache.dir/link.txt --verbose=$(VERBOSE)
 

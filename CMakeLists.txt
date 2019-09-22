@@ -30,13 +30,13 @@ find_package(GTest CONFIG REQUIRED)
 add_library(AnalyseCache STATIC
   # enum your files and delete this comment
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-)
+        include/Experiment.h sources/Experiment.cpp include/Analysis.h include/AnasysisExceptions.h sources/Analysys.cpp)
 add_executable(tests
   # TODO: enum your files and delete this comment
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
 
-)
+        include/Experiment.h)
 
 
 target_include_directories(AnalyseCache

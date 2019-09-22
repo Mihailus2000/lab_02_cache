@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-
 CMakeFiles/AnalyseCache.dir/all:
 	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/depend
 	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target AnalyseCache"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target AnalyseCache"
 .PHONY : CMakeFiles/AnalyseCache.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/AnalyseCache.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/AnalyseCache.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/AnalyseCache.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/AnalyseCache.dir/rule
@@ -108,7 +108,7 @@ clean: CMakeFiles/AnalyseCache.dir/clean
 CMakeFiles/tests.dir/all: CMakeFiles/AnalyseCache.dir/all
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=5,6,7 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Include target in all.
@@ -118,7 +118,7 @@ all: CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule

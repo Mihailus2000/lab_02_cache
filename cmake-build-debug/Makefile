@@ -174,33 +174,6 @@ sources/Analysys.cpp.s:
 	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.s
 .PHONY : sources/Analysys.cpp.s
 
-sources/Experiment.o: sources/Experiment.cpp.o
-
-.PHONY : sources/Experiment.o
-
-# target to build an object file
-sources/Experiment.cpp.o:
-	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o
-.PHONY : sources/Experiment.cpp.o
-
-sources/Experiment.i: sources/Experiment.cpp.i
-
-.PHONY : sources/Experiment.i
-
-# target to preprocess a source file
-sources/Experiment.cpp.i:
-	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.i
-.PHONY : sources/Experiment.cpp.i
-
-sources/Experiment.s: sources/Experiment.cpp.s
-
-.PHONY : sources/Experiment.s
-
-# target to generate assembly for a file
-sources/Experiment.cpp.s:
-	$(MAKE) -f CMakeFiles/AnalyseCache.dir/build.make CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.s
-.PHONY : sources/Experiment.cpp.s
-
 sources/source.o: sources/source.cpp.o
 
 .PHONY : sources/source.o
@@ -231,33 +204,6 @@ sources/source.cpp.s:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/sources/source.cpp.s
 .PHONY : sources/source.cpp.s
 
-tests/test.o: tests/test.cpp.o
-
-.PHONY : tests/test.o
-
-# target to build an object file
-tests/test.cpp.o:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.o
-.PHONY : tests/test.cpp.o
-
-tests/test.i: tests/test.cpp.i
-
-.PHONY : tests/test.i
-
-# target to preprocess a source file
-tests/test.cpp.i:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.i
-.PHONY : tests/test.cpp.i
-
-tests/test.s: tests/test.cpp.s
-
-.PHONY : tests/test.s
-
-# target to generate assembly for a file
-tests/test.cpp.s:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.s
-.PHONY : tests/test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -272,15 +218,9 @@ help:
 	@echo "... sources/Analysys.o"
 	@echo "... sources/Analysys.i"
 	@echo "... sources/Analysys.s"
-	@echo "... sources/Experiment.o"
-	@echo "... sources/Experiment.i"
-	@echo "... sources/Experiment.s"
 	@echo "... sources/source.o"
 	@echo "... sources/source.i"
 	@echo "... sources/source.s"
-	@echo "... tests/test.o"
-	@echo "... tests/test.i"
-	@echo "... tests/test.s"
 .PHONY : help
 
 

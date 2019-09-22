@@ -1,0 +1,2 @@
+/usr/bin/ar qc libAnalyseCache.a  CMakeFiles/AnalyseCache.dir/sources/source.cpp.o CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o
+/usr/bin/ranlib libAnalyseCache.a

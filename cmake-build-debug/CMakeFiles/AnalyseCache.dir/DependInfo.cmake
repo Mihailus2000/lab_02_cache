@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Analysys.cpp" "/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o"
-  "/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/Experiment.cpp" "/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/AnalyseCache.dir/sources/Experiment.cpp.o"
   "/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/sources/source.cpp" "/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug/CMakeFiles/AnalyseCache.dir/sources/source.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

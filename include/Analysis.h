@@ -30,11 +30,11 @@ public:
 private:
 
     struct AnalysysResults {
-        std::map<Buffer*, std::chrono::nanoseconds> ResultsOfDirectPassage;
+        std::map<Buffer*, std::chrono::milliseconds> ResultsOfDirectPassage;
 
-        std::map<Buffer*, std::chrono::nanoseconds> ResultsOfReversePassage;
+        std::map<Buffer*, std::chrono::milliseconds> ResultsOfReversePassage;
 
-        std::map<Buffer*, std::chrono::nanoseconds> ResultsOfRandomPassage;
+        std::map<Buffer*, std::chrono::milliseconds> ResultsOfRandomPassage;
 
     };
 

@@ -25,7 +25,7 @@ void Analysis::directPassage() {
             }
         }
         auto end = std::chrono::high_resolution_clock::now();
-        results.ResultsOfDirectPassage.emplace(buf, end - start);
+        results.ResultsOfDirectPassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
         buf->buf_data[0] = value;
 #ifdef _DEBUG
         std::cout << "  - experiment:\n";
@@ -56,13 +56,20 @@ void Analysis::reversePassage() {
             Buffer *buf = &arrayOfBuffers[k];
 //            std::cout << "amount_reverse_Experiment = " << amountOfElements_ << std::endl;
             auto start = std::chrono::high_resolution_clock::now();
+//            int ind = 0, inf = 0;
             for (int i = 0; i < 1000; i++) {
+//                ind++;
                 for (unsigned j = buf->amountOfElements; j > 0; j--) {
+//                    inf++;
                     value = buf->buf_data[j];
                 }
+//                std::cout << "amount : " << buf->amountOfElements << "\n\n";
+//                std::cout << inf << std::endl;
             }
+//            std::cout << ind << std::endl << "---------\n";
+
             auto end = std::chrono::high_resolution_clock::now();
-            results.ResultsOfReversePassage.emplace(buf, end - start);
+            results.ResultsOfReversePassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
             buf->buf_data[0] = value;
 #ifdef _DEBUG
             std::cout << "  - experiment:\n";
@@ -103,7 +110,7 @@ void Analysis::randomPassage() {
             }
         }
         auto end = std::chrono::high_resolution_clock::now();
-        results.ResultsOfRandomPassage.emplace(buf, end - start);
+        results.ResultsOfRandomPassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
         buf->buf_data[0] = value;
 
 //        buffer[0] = value;
@@ -138,9 +145,9 @@ void Analysis::InvestigetionOutputInFile() {
             fout << "  - experiment:\n";
             fout << "      number: " << i << std::endl;
             fout << "      input_data:\n";
-            fout << "        buffer_size: \"" << index.first->size << "mb\"\n";
+            fout << "        buffer_size: \"" << index.first->size << "kb\"\n";
             fout << "      results:\n";
-            fout << "        duration: \"" << index.second.count() << "ns\"\n";
+            fout << "        duration: \"" << index.second.count() << "ms\"\n";
             i++;
         }
 
@@ -149,13 +156,13 @@ void Analysis::InvestigetionOutputInFile() {
         fout << "investigation:\n";
         fout << "  travel_order: \"backward\"\n ";
         fout << "  experiments:\n";
-        for(auto index : results.ResultsOfDirectPassage){
+        for(auto index : results.ResultsOfReversePassage){
             fout << "  - experiment:\n";
             fout << "      number: " << i << std::endl;
             fout << "      input_data:\n";
-            fout << "        buffer_size: \"" << index.first->size << "mb\"\n";
+            fout << "        buffer_size: \"" << index.first->size << "kb\"\n";
             fout << "      results:\n";
-            fout << "        duration: \"" << index.second.count() << "ns\"\n";
+            fout << "        duration: \"" << index.second.count() << "ms\"\n";
             i++;
         }
 
@@ -164,13 +171,13 @@ void Analysis::InvestigetionOutputInFile() {
         fout << "investigation:\n";
         fout << "  travel_order: \"random\"\n ";
         fout << "  experiments:\n";
-        for(auto index : results.ResultsOfDirectPassage){
+        for(auto index : results.ResultsOfRandomPassage){
             fout << "  - experiment:\n";
             fout << "      number: " << i << std::endl;
             fout << "      input_data:\n";
-            fout << "        buffer_size: \"" << index.first->size << "mb\"\n";
+            fout << "        buffer_size: \"" << index.first->size << "kb\"\n";
             fout << "      results:\n";
-            fout << "        duration: \"" << index.second.count() << "ns\"\n";
+            fout << "        duration: \"" << index.second.count() << "ms\"\n";
             i++;
         }
         fout.close();
@@ -200,6 +207,7 @@ void Analysis::start() {
                 buffer[i] = rand();
             }
             buf.size = bufer_size;
+            buf.amountOfElements = amountOfElement;
             buf.buf_data = std::move(buffer);
             arrayOfBuffers.push_back(std::move(buf));
             degree++;
@@ -245,9 +253,9 @@ void Analysis::InvestigetionOutputInConsole() {
         std::cout << "  - experiment:\n";
         std::cout << "      number: " << i << std::endl;
         std::cout << "      input_data:\n";
-        std::cout << "        buffer_size: \"" << index.first->size << "mb\"\n";
+        std::cout << "        buffer_size: \"" << index.first->size << "kb\"\n";
         std::cout << "      results:\n";
-        std::cout << "        duration: \"" << index.second.count() << "ns\"\n";
+        std::cout << "        duration: \"" << index.second.count() << "ms\"\n";
         i++;
     }
 
@@ -256,13 +264,13 @@ void Analysis::InvestigetionOutputInConsole() {
     std::cout << "investigation:\n";
     std::cout << "  travel_order: \"backward\"\n ";
     std::cout << "  experiments:\n";
-    for (auto index : results.ResultsOfDirectPassage) {
+    for (auto index : results.ResultsOfReversePassage) {
         std::cout << "  - experiment:\n";
         std::cout << "      number: " << i << std::endl;
         std::cout << "      input_data:\n";
-        std::cout << "        buffer_size: \"" << index.first->size << "mb\"\n";
+        std::cout << "        buffer_size: \"" << index.first->size << "kb\"\n";
         std::cout << "      results:\n";
-        std::cout << "        duration: \"" << index.second.count() << "ns\"\n";
+        std::cout << "        duration: \"" << index.second.count() << "ms\"\n";
         i++;
     }
 
@@ -271,13 +279,13 @@ void Analysis::InvestigetionOutputInConsole() {
     std::cout << "investigation:\n";
     std::cout << "  travel_order: \"random\"\n ";
     std::cout << "  experiments:\n";
-    for (auto index : results.ResultsOfDirectPassage) {
+    for (auto index : results.ResultsOfRandomPassage) {
         std::cout << "  - experiment:\n";
         std::cout << "      number: " << i << std::endl;
         std::cout << "      input_data:\n";
-        std::cout << "        buffer_size: \"" << index.first->size << "mb\"\n";
+        std::cout << "        buffer_size: \"" << index.first->size << "kb\"\n";
         std::cout << "      results:\n";
-        std::cout << "        duration: \"" << index.second.count() << "ns\"\n";
+        std::cout << "        duration: \"" << index.second.count() << "ms\"\n";
         i++;
     }
 }

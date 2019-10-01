@@ -80,7 +80,6 @@ tests_EXTERNAL_OBJECTS =
 tests: CMakeFiles/tests.dir/sources/source.cpp.o
 tests: CMakeFiles/tests.dir/build.make
 tests: /home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install/lib/libgtest.a
-tests: /home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install/lib/libgtest_main.a
 tests: libAnalyseCache.a
 tests: CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tests"

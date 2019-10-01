@@ -47,23 +47,23 @@ target_include_directories(tests
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${GTEST_ROOT}/include
 )
-find_library(
-        GTEST_LOCAL_LIB
-        NAMES gtest
-        PATHS ${GTEST_ROOT}/lib
-)
-
-find_library(
-        GTEST_LOCAL_LIB_MAIN
-        NAMES gtest_main
-        PATHS ${PROJECT_NAME}/lib
-)
+#find_library(
+#        GTEST_LOCAL_LIB
+#        NAMES gtest
+#        PATHS ${GTEST_ROOT}/lib
+#)
+#
+#find_library(
+#        GTEST_LOCAL_LIB_MAIN
+#        NAMES gtest_main
+#        PATHS ${PROJECT_NAME}/lib
+#)
 
 target_link_libraries(tests
 #        gtest_main
         ${CMAKE_THREAD_LIBS_INIT}
-        ${GTEST_LOCAL_LIB}
-        ${GTEST_LOCAL_LIB_MAIN}
+        GTest::gtest
+        GTest::main
         AnalyseCache
         )
 

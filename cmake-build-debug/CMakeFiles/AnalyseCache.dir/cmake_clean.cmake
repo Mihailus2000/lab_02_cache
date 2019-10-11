@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/AnalyseCache.dir/sources/source.cpp.o"
   "CMakeFiles/AnalyseCache.dir/sources/Analysys.cpp.o"
-  "libAnalyseCached.pdb"
+  "CMakeFiles/AnalyseCache.dir/sources/source.cpp.o"
   "libAnalyseCached.a"
+  "libAnalyseCached.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,15 +1,28 @@
-/opt/clion-2019.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache
+/home/mihailus/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.18/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8 -G "CodeBlocks - Unix Makefiles" /home/mihailus/Документы/MGTU_2_1_АЯ/lab-02-cache
+-- [hunter] Initializing Hunter workspace (9a3594a61227967fb92159339ba326701b287b19)
+-- [hunter]   https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz
+-- [hunter]   -> /home/mihailus/.hunter/_Base/Download/Hunter/0.23.218/9a3594a
+-- The C compiler identification is GNU 8.3.0
+-- The CXX compiler identification is GNU 8.3.0
+-- Check for working C compiler: /usr/bin/gcc-8
+-- Check for working C compiler: /usr/bin/gcc-8 -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/g++-8
+-- Check for working CXX compiler: /usr/bin/g++-8 -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- [hunter] Calculating Toolchain-SHA1
 -- [hunter] Calculating Config-SHA1
 -- [hunter] HUNTER_ROOT: /home/mihailus/.hunter
--- [hunter] [ Hunter-ID: 70287b1 | Toolchain-ID: 3ed7151 | Config-ID: b8f46c4 ]
--- [hunter] GTEST_ROOT: /home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install (ver.: 1.8.1)
+-- [hunter] [ Hunter-ID: 9a3594a | Toolchain-ID: 70e2fd0 | Config-ID: 48401e9 ]
+-- [hunter] GTEST_ROOT: /home/mihailus/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install (ver.: 1.8.0-hunter-p11)
+-- [hunter] Cache HIT: GTest
+-- [hunter] Cache info: /home/mihailus/.hunter/_Base/Cache/meta/70e2fd0/GTest/1.8.0-hunter-p11/76c6aec/0113760/4830b34/e5fa44f/da39a3e/cache.sha1
 -- Configuring done
-CMake Error at CMakeLists.txt:34 (add_executable):
-  Target "tests" links to target "GTest::main" but the target was not found.
-  Perhaps a find_package() call is missing for an IMPORTED target, or an
-  ALIAS target is missing?
-
-
 -- Generating done
--- Build files have been written to: /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug
+-- Build files have been written to: /home/mihailus/Документы/MGTU_2_1_АЯ/lab-02-cache/cmake-build-debug

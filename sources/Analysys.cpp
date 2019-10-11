@@ -21,12 +21,12 @@ void Analysis::directPassage() {
         auto start = std::chrono::high_resolution_clock::now();
         for (unsigned i = 0; i < 1000; i++) {
             for (unsigned j = 0; j < buf->amountOfElements; j++) {
-                value = buf->buf_data[j];
+                value = buf->bufData[j];
             }
         }
         auto end = std::chrono::high_resolution_clock::now();
         results.ResultsOfDirectPassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
-        buf->buf_data[0] = value;
+        buf->bufData[0] = value;
 #ifdef _DEBUG
         std::cout << "  - experiment:\n";
         std::cout << "      number: " << k+1 << std::endl;
@@ -61,7 +61,7 @@ void Analysis::reversePassage() {
 //                ind++;
                 for (unsigned j = buf->amountOfElements; j > 0; j--) {
 //                    inf++;
-                    value = buf->buf_data[j];
+                    value = buf->bufData[j];
                 }
 //                std::cout << "amount : " << buf->amountOfElements << "\n\n";
 //                std::cout << inf << std::endl;
@@ -70,7 +70,7 @@ void Analysis::reversePassage() {
 
             auto end = std::chrono::high_resolution_clock::now();
             results.ResultsOfReversePassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
-            buf->buf_data[0] = value;
+            buf->bufData[0] = value;
 #ifdef _DEBUG
             std::cout << "  - experiment:\n";
             std::cout << "      number: " << k+1 << std::endl;
@@ -106,12 +106,12 @@ void Analysis::randomPassage() {
         auto start = std::chrono::high_resolution_clock::now();
         for (int i = 0; i < 1000; i++) {
             for (size_t index : indexes) {
-                value = buf->buf_data[index];
+                value = buf->bufData[index];
             }
         }
         auto end = std::chrono::high_resolution_clock::now();
         results.ResultsOfRandomPassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
-        buf->buf_data[0] = value;
+        buf->bufData[0] = value;
 
 //        buffer[0] = value;
 
@@ -144,7 +144,7 @@ void Analysis::InvestigetionOutputInFile() {
         for(auto index : results.ResultsOfDirectPassage){
             fout << "  - experiment:\n";
             fout << "      number: " << i << std::endl;
-            fout << "      input_data:\n";
+            fout <<     "      input_data:\n";
             fout << "        buffer_size: \"" << index.first->size << "kb\"\n";
             fout << "      results:\n";
             fout << "        duration: \"" << index.second.count() << "ms\"\n";
@@ -191,30 +191,27 @@ void Analysis::InvestigetionOutputInFile() {
 
 void Analysis::start() {
     try {
-
-        double start_bufer_size = 0.5 * min_cache_size;  // 0.03125 Мб = 32 Кб = 262144 бит кол-во эл = 252144 / 8
-        int64_t amountOfElement = (start_bufer_size * 1024) / sizeof(int64_t);
-        int64_t start_degree = std::log2(start_bufer_size);
-        if (start_degree < 0)
-            start_degree = 0;
-        int64_t degree = start_degree;
-        double bufer_size = start_bufer_size; // Мб
-        double max_bufer_size = 1.5 * max_cache_size; // Мб
+        int64_t amountOfElement = (MIN_CACHE_SIZE / 2.0 * 1024) / sizeof(int64_t);
+        double buferSize = MIN_CACHE_SIZE / 2;
+        int64_t degree = std::log2(buferSize);
         do {
             Buffer buf;
             std::unique_ptr<uint64_t[]> buffer = std::make_unique<uint64_t[]>(amountOfElement);
+
+            /*Прогрев буфера*/
             for (unsigned i = 0; i < amountOfElement; ++i) {
                 buffer[i] = rand();
             }
-            buf.size = bufer_size;
+            /*--------------*/
+
+            buf.size = buferSize;
             buf.amountOfElements = amountOfElement;
-            buf.buf_data = std::move(buffer);
+            buf.bufData = std::move(buffer);
             arrayOfBuffers.push_back(std::move(buf));
             degree++;
-            bufer_size = pow(2, degree); // Мб
-            amountOfElement = bufer_size * 1024 / sizeof(int64_t);
-
-        } while (bufer_size < max_bufer_size);
+            buferSize = pow(2, degree); // Мб
+            amountOfElement = buferSize * 1024 / sizeof(int64_t);
+        } while (buferSize < MAX_CACHE_SIZE * 1.5);
 
         directPassage();
         reversePassage();
@@ -227,17 +224,17 @@ void Analysis::start() {
 
 Analysis::~Analysis() {
     for(auto item : results.ResultsOfDirectPassage){
-     item.first->buf_data.reset(nullptr);
+     item.first->bufData.reset(nullptr);
     }
     results.ResultsOfDirectPassage.clear();
 
     for(auto item : results.ResultsOfReversePassage){
-        item.first->buf_data.reset(nullptr);
+        item.first->bufData.reset(nullptr);
     }
     results.ResultsOfReversePassage.clear();
 
     for(auto item : results.ResultsOfRandomPassage){
-        item.first->buf_data.reset(nullptr);
+        item.first->bufData.reset(nullptr);
     }
     results.ResultsOfRandomPassage.clear();
 

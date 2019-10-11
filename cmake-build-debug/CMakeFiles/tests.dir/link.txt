@@ -1,1 +1,1 @@
-/usr/bin/c++   -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -Wshadow -Wnon-virtual-dtor -g   CMakeFiles/tests.dir/sources/source.cpp.o  -o tests -pthread /home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install/lib/libgtestd.a -lGTest::main libAnalyseCached.a -pthread 
+/usr/bin/g++-8   -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -Wshadow -Wnon-virtual-dtor -g   CMakeFiles/tests.dir/sources/source.cpp.o  -o tests libAnalyseCached.a 

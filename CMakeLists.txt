@@ -14,8 +14,8 @@ set(
 include("tools/gate/cmake/HunterGate.cmake")
 
 huntergate(
-  URL "https://github.com/ruslo/hunter/archive/v0.23.34.tar.gz"
-  SHA1 "70287b1ffa810ee4e952052a9adff9b4856d0d54"
+        URL "https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz"
+        SHA1 "9a3594a61227967fb92159339ba326701b287b19"
 )
 
 project(AnalyseCache)
@@ -47,23 +47,15 @@ target_include_directories(tests
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${GTEST_ROOT}/include
 )
-#find_library(
-#        GTEST_LOCAL_LIB
-#        NAMES gtest
-#        PATHS ${GTEST_ROOT}/lib
-#)
-#
-#find_library(
-#        GTEST_LOCAL_LIB_MAIN
-#        NAMES gtest_main
-#        PATHS ${PROJECT_NAME}/lib
-#)
+
 
 target_link_libraries(tests
 #        gtest_main
         ${CMAKE_THREAD_LIBS_INIT}
-        GTest::gtest
-        GTest::main
+        ${GTEST_LOCAL_LIB}
+        ${GTEST_LOCAL_LIB_MAIN}
+        #        GTest::gtest
+#        GTest::main
         AnalyseCache
         )
 

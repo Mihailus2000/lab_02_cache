@@ -1,4 +1,4 @@
-# Install script for directory: /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-release/_3rdParty/Hunter/toolchain
+# Install script for directory: /home/mihailus/Документы/MGTU_2_1_АЯ/lab-02-cache/cmake-build-release/_3rdParty/Hunter/toolchain
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-02-cache/cmake-build-release/_3rdParty/Hunter/toolchain/_builds/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mihailus/Документы/MGTU_2_1_АЯ/lab-02-cache/cmake-build-release/_3rdParty/Hunter/toolchain/_builds/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

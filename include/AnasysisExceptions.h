@@ -10,7 +10,7 @@
 
 class AnalysisExceptions : public std::exception {
 public:
-    AnalysisExceptions(std::string const &message) : message_(message) {}
+    explicit AnalysisExceptions(std::string const &message) : message_(message) {}
 
     virtual ~AnalysisExceptions() = default;
 

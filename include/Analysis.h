@@ -19,21 +19,15 @@ struct Buffer{
 class Analysis {
 public:
     Analysis() = default;
-
     virtual ~Analysis();
-
     void start();
-
     void InvestigetionOutputInFile();
     void InvestigetionOutputInConsole();
 
 private:
-
     struct AnalysysResults {
         std::map<Buffer*, std::chrono::milliseconds> ResultsOfDirectPassage;
-
         std::map<Buffer*, std::chrono::milliseconds> ResultsOfReversePassage;
-
         std::map<Buffer*, std::chrono::milliseconds> ResultsOfRandomPassage;
 
     };

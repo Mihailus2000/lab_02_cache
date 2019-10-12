@@ -10,13 +10,7 @@
 void Analysis::directPassage() {
     int64_t value = 0;
 
-#ifdef _DEBUG
-    std::cout << "investigation:\n";
-    std::cout << "  travel_order: \"forward\"\n ";
-    std::cout << "  experiments:\n";
-#endif
-    for(unsigned k = 0; k < arrayOfBuffers.size();k++) {
-
+    for (unsigned k = 0; k < arrayOfBuffers.size(); k++) {
         Buffer *buf = &arrayOfBuffers[k];
         auto start = std::chrono::high_resolution_clock::now();
         for (unsigned i = 0; i < 1000; i++) {
@@ -27,82 +21,34 @@ void Analysis::directPassage() {
         auto end = std::chrono::high_resolution_clock::now();
         results.ResultsOfDirectPassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
         buf->bufData[0] = value;
-#ifdef _DEBUG
-        std::cout << "  - experiment:\n";
-        std::cout << "      number: " << k+1 << std::endl;
-        std::cout << "      input_data:\n";
-        std::cout << "        buffer_size: \"" << buf->size << "mb\"\n";
-        std::cout << "      results:\n";
-        std::cout << "        duration: \"" << (end-start).count() << "ns\"\n";
-#endif
     }
-
-#ifdef _DEBUG
-    std::cout << std::endl;
-#endif
-
 }
 
 void Analysis::reversePassage() {
         int64_t value = 0;
 
-#ifdef _DEBUG
-    std::cout << "investigation:\n";
-    std::cout << "  travel_order: \"backward\"\n ";
-    std::cout << "  experiments:\n";
-#endif
-
         for(unsigned k = 0; k < arrayOfBuffers.size();k++) {
             Buffer *buf = &arrayOfBuffers[k];
-//            std::cout << "amount_reverse_Experiment = " << amountOfElements_ << std::endl;
             auto start = std::chrono::high_resolution_clock::now();
-//            int ind = 0, inf = 0;
             for (int i = 0; i < 1000; i++) {
-//                ind++;
                 for (unsigned j = buf->amountOfElements; j > 0; j--) {
-//                    inf++;
                     value = buf->bufData[j];
                 }
-//                std::cout << "amount : " << buf->amountOfElements << "\n\n";
-//                std::cout << inf << std::endl;
             }
-//            std::cout << ind << std::endl << "---------\n";
-
             auto end = std::chrono::high_resolution_clock::now();
             results.ResultsOfReversePassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
             buf->bufData[0] = value;
-#ifdef _DEBUG
-            std::cout << "  - experiment:\n";
-            std::cout << "      number: " << k+1 << std::endl;
-            std::cout << "      input_data:\n";
-            std::cout << "        buffer_size: \"" << buf->size << "mb\"\n";
-            std::cout << "      results:\n";
-            std::cout << "        duration: \"" << (end-start).count() << "ns\"\n";
-#endif
-
-//            buffer[0] = value;
         }
-
-#ifdef _DEBUG
-    std::cout << std::endl;
-#endif
-
 }
 
 
 void Analysis::randomPassage() {
     int64_t value = 0;
-#ifdef _DEBUG
-    std::cout << "investigation:\n";
-    std::cout << "  travel_order: \"random\"\n ";
-    std::cout << "  experiments:\n";
-#endif
     for(unsigned k = 0; k < arrayOfBuffers.size();k++) {
         Buffer *buf = &arrayOfBuffers[k];
         std::vector<size_t> indexes(buf->amountOfElements);
         std::iota(indexes.begin(), indexes.end(), 0);
         std::shuffle(indexes.begin(), indexes.end(), std::mt19937(std::random_device()()));
-//        std::cout << "amount_random_Experiment = " << amountOfElements_ << std::endl;
         auto start = std::chrono::high_resolution_clock::now();
         for (int i = 0; i < 1000; i++) {
             for (size_t index : indexes) {
@@ -112,26 +58,8 @@ void Analysis::randomPassage() {
         auto end = std::chrono::high_resolution_clock::now();
         results.ResultsOfRandomPassage.emplace(buf, std::chrono::duration_cast<std::chrono::milliseconds>(end - start));
         buf->bufData[0] = value;
-
-//        buffer[0] = value;
-
-#ifdef _DEBUG
-        std::cout << "  - experiment:\n";
-        std::cout << "      number: " << k+1 << std::endl;
-        std::cout << "      input_data:\n";
-        std::cout << "        buffer_size: \"" << buf->size << "mb\"\n";
-        std::cout << "      results:\n";
-        std::cout << "        duration: \"" << (end-start).count() << "ns\"\n";
-#endif
     }
-
-#ifdef _DEBUG
-    std::cout << std::endl;
-#endif
-
 }
-
-
 
 void Analysis::InvestigetionOutputInFile() {
     std::ofstream fout;
